@@ -19,3 +19,6 @@
 .back-btn{
   background: $secondary
 }
+.rl-card{
+  margin-top:$gutter;
+}

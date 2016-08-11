@@ -1,18 +1,21 @@
 
 <div class="main-container">
   <div class="main-container__inner">
-<div class="content box">
+<div class="content box rl-card">
     <h1 class="page-title">Register</h1>
-  <form>
+{{#simple-form onsubmit=(action "registerUser") as |inputs|}}
     <label for="email">Email</label>
-    <input name="email" type="text" class="reg-email input">
+    {{input value=inputs.email name="email" type="text" class="reg-email input"}}
 <label for="password">Password</label>
-    <input name="password"type="text" class="reg-password input">
+    {{input value=inputs.password name="password" type="text" class="reg-password input"}}
 <div class="button-group">
+  {{#link-to 'game-store'}}
+
   <div class="button back-btn">back</div>
+  {{/link-to}}
   <button class="button submit-btn"> Create New Account</button>
 </div>
-  </form>
+{{/simple-form}}
   </div>
   </div>
 </div>
